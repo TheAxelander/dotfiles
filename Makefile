@@ -4,12 +4,10 @@ setup-debian-server:
 	apt update && apt upgrade -y && apt autoremove
 	apt install -y curl zsh powerline fonts-powerline exa mc btop
 
-	wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-	sh install.sh --unattended
-	rm install.sh
-	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	git clone https://github.com/zsh-users/zsh-autosuggestions $${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	cp .zshrc ~/.zshrc
-	chsh -s $(which zsh)
+	chsh -s $$(which zsh)
 
 	curl https://getmic.ro | bash
 	mv micro /usr/bin
