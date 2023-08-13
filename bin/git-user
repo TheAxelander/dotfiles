@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -x
+
+git config user.name "Alexander Preibisch"
+git config user.email "alexpreib@outlook.com"
