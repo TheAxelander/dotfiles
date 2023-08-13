@@ -2,9 +2,11 @@ SHELL=/bin/bash
 
 setup-debian-server:
 	apt update && apt upgrade -y && apt autoremove
-	apt install -y git zsh powerline fonts-powerline exa mc btop
+	apt install -y curl zsh powerline fonts-powerline exa mc btop
 
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+	sh install.sh --unattended
+	rm install.sh
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	cp .zshrc ~/.zshrc
 

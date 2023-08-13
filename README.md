@@ -3,6 +3,7 @@
 ## Install
 
 ``` bash
+apt install git make
 git clone https://github.com/TheAxelander/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
