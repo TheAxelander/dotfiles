@@ -9,6 +9,7 @@ setup-debian-server:
 	rm install.sh
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	cp .zshrc ~/.zshrc
+	chsh -s $(which zsh)
 
 	curl https://getmic.ro | bash
 	mv micro /usr/bin
