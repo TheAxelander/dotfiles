@@ -12,6 +12,14 @@ setup-debian-server:
 	curl https://getmic.ro | bash
 	mv micro /usr/bin
 
+setup-ssh-homelab:
+	cp ssh-homelab.conf /etc/ssh/sshd_config.d/ssh-homelab.conf
+	service ssh restart
+
+setup-ssh-public:
+	cp ssh-public.conf /etc/ssh/sshd_config.d/ssh-public.conf
+	service ssh restart
+
 setup-dotnet:
 	apt install -y dotnet-sdk-7.0
 	dotnet tool install -g dotnet-ef
