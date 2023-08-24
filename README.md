@@ -11,4 +11,5 @@ make setup-debian-server
 make setup-dotnet
 make setup-git
 make setup-docker
+make setup-unattended-upgrades
 ```

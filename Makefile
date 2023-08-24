@@ -25,3 +25,7 @@ setup-docker:
 	sh get-docker.sh
 	adduser $$USER docker
 	ln -s /var/lib/docker/volumes ~/docker_volumes
+
+setup-unattended-upgrades:
+	apt install -y unattended-upgrades apt-listchanges
+	cp 50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades
