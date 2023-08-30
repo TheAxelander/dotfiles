@@ -2,5 +2,5 @@
 
 set -x
 
-git config user.name "Alexander Preibisch"
-git config user.email "alexpreib@outlook.com"
+git config --global user.name "Alexander Preibisch"
+git config --global user.email "alexpreib@outlook.com"
