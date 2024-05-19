@@ -1,0 +1,5 @@
+[user]
+	email = alexpreib@outlook.com
+	name = Alexander Preibisch
+[core]
+	autocrlf = input

@@ -1,6 +1,0 @@
-#!/bin/sh
-
-set -x
-
-git config --global user.name "Alexander Preibisch"
-git config --global user.email "alexpreib@outlook.com"
