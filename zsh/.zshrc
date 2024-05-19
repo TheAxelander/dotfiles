@@ -72,7 +72,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fzf-tab git dirhistory docker docker-compose dotnet zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git dirhistory docker docker-compose dotnet zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,14 +108,14 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Additional fzf-tab config
 # set list-colors to enable filename colorizing
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+#zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
-zstyle ':completion:*' menu no
+#zstyle ':completion:*' menu no
 # include hidden dirs
-setopt globdots && zstyle ':completion:*' special-dirs true
+#setopt globdots && zstyle ':completion:*' special-dirs true
 # preview directory's content with eza when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+#zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `<` and `>`
-zstyle ':fzf-tab:*' switch-group '<' '>'
+#zstyle ':fzf-tab:*' switch-group '<' '>'
 # Run enable-fzf-tab
-enable-fzf-tab
+#enable-fzf-tab
