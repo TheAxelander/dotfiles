@@ -10,5 +10,6 @@ cd ~/.dotfiles
 
 stow git
 stow micro
+stow ssh
 stow zsh
 ```
