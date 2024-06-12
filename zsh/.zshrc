@@ -119,3 +119,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group '<' '>'
 # Run enable-fzf-tab
 enable-fzf-tab
+
+# Installing navi shell widget
+eval "$(navi widget zsh)"
