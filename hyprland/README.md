@@ -7,10 +7,13 @@ kitty
 btop
 brightnessctl
 file-roller
+gvfs
+gvfs-smb
 mako
 network-manager-applet
 swww
 thunar
+thunar-volman
 waybar
 wofi
 wlogout
