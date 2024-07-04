@@ -9,7 +9,8 @@ git clone https://github.com/TheAxelander/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
 stow git
-stow micro
+mkdir ~/.config && stow hyprland
+mkdir ~/.config && stow micro
 stow ssh
 stow zsh
 ```
