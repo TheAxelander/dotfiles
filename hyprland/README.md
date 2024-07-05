@@ -19,6 +19,9 @@ wofi
 wlogout
 noto-fonts-emoji
 ttf-jetbrains-mono-nerd
+qt5‑graphicaleffects
+qt5‑quickcontrols2
+qt5‑svg
 ```
 
 Not sure about these yet: 
