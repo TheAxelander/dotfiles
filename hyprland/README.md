@@ -15,6 +15,7 @@ swww
 thunar
 thunar-volman
 waybar
+waypaper
 wofi
 wlogout
 noto-fonts-emoji
@@ -24,7 +25,7 @@ qt5‑quickcontrols2
 qt5‑svg
 ```
 
-Not sure about these yet: 
+Not sure about these yet:
 
 ```
 lxappearance
@@ -40,3 +41,7 @@ xfconf-query -c xsettings -p /Net/IconThemeName -s "Adwaita-dark"
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface icon-theme "Adwaita-dark"
 ```
+
+## Wallpaper
+
+To set wallpaper run `waypaper`
