@@ -3,14 +3,15 @@
 ## Install
 
 ```bash
-apt install git stow
+yay -S tuckr-git
 
 git clone https://github.com/TheAxelander/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
-stow git
-mkdir ~/.config && stow hyprland
-mkdir ~/.config && stow micro
-stow ssh
-stow zsh
+tuckr add git
+tuckr add ssh
+tuckr add zsh
+
+tuckr set hyprland
+tuckr set micro
 ```
