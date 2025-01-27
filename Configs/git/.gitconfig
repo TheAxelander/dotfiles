@@ -3,3 +3,4 @@
 	name = Alexander Preibisch
 [core]
 	autocrlf = input
+	editor = nano
