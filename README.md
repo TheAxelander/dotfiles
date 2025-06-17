@@ -10,6 +10,7 @@ cd ~/.dotfiles
 
 tuckr add git
 tuckr add ssh
+tuckr add tmux
 tuckr add zsh
 
 tuckr set hyprland
