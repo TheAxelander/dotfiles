@@ -9,9 +9,9 @@ git clone https://github.com/TheAxelander/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
 tuckr add git
-tuckr add ssh
+tuckr set ssh
 tuckr add tmux
-tuckr add zsh
+tuckr set zsh # or zsh-arch
 
 tuckr set hyprland
 tuckr set micro
