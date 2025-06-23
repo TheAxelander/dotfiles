@@ -1,6 +1,11 @@
 [user]
 	email = alexpreib@outlook.com
 	name = Alexander Preibisch
+	signingkey = A1E17E45EF7DCA8B
 [core]
 	autocrlf = input
 	editor = nano
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
