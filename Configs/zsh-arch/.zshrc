@@ -2,6 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.dotnet:$HOME/.dotnet/tools:$PATH
 export DOTNET_ROOT=/usr/share/dotnet
 export BAT_THEME=gruvbox-dark
+export GPG_TTY=$(tty)
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
