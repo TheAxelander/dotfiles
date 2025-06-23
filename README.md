@@ -12,6 +12,7 @@ tuckr add git
 tuckr set ssh
 tuckr add tmux
 tuckr set zsh # or zsh-arch
+tuckr set gpg
 
 tuckr set hyprland
 tuckr set micro
