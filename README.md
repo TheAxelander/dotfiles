@@ -9,8 +9,9 @@ git clone https://github.com/TheAxelander/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
 stow git
-mkdir ~/.config && stow hyprland
-mkdir ~/.config && stow micro
-stow ssh
-stow zsh
+mkdir -p $HOME/.gnupg && stow gpg
+mkdir -p $HOME/.config/micro && stow micro
+mkdir -p $HOME/.ssh && stow ssh
+stow tmux
+stow zsh # or: stow zsh-arch
 ```
