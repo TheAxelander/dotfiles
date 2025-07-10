@@ -116,6 +116,8 @@ zstyle ':completion:*' menu no
 setopt globdots && zstyle ':completion:*' special-dirs true
 # preview directory's content with eza when completing cd
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -a -1 --color=always $realpath'
+# show SSH hosts from config file
+zstyle ':completion:*:*:ssh:*' hosts $(awk '/^Host / {for (i=2; i<=NF; i++) print $i}' ~/.ssh/config)
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
 # Run enable-fzf-tab
