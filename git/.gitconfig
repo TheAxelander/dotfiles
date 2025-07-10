@@ -1,5 +1,11 @@
 [user]
-	email = alexpreib@outlook.com
+	email = git@axelander.dev
 	name = Alexander Preibisch
+	signingkey = A534C1553AA901EC
 [core]
 	autocrlf = input
+	editor = nano
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
