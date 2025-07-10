@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias exa="eza -la"
+alias batp="bat --plain"
 eval "$(zoxide init --cmd cd zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
