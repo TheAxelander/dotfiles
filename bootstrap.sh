@@ -38,12 +38,12 @@ clear
 for selection in $selections; do
     case $selection in
         1) stow git ;;
-        2) pre-gpg && stow gpg ;;
-        3) pre-micro && stow micro ;;
-        4) pre-ssh && stow ssh ;;
+        2) pre_gpg && stow gpg ;;
+        3) pre_micro && stow micro ;;
+        4) pre_ssh && stow ssh ;;
         5) stow tmux ;;
-        6) pre-zsh && stow zsh ;;
-        7) pre-zsh && stow zsh-arch ;;
+        6) pre_zsh && stow zsh ;;
+        7) pre_zsh && stow zsh-arch ;;
         *) echo "Invalid selection: $selection" ;;
     esac
 done
