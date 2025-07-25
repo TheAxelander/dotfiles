@@ -20,20 +20,23 @@ pre_zsh() {
   fi
 }
 
-cmd=(whiptail --separate-output --title "Stow config" --checklist "Select configs to apply:" 20 78 7)
-options=(
-  1 "Git" off
-  2 "GPG" off
-  3 "micro" off
-  4 "SSH" off
-  5 "tmux" off
-  6 "zsh" off
-  7 "zsh-arch" off
-)
+if [ "$#" -gt 0 ]; then
+  selections="$@"
+else
+  cmd=(whiptail --separate-output --title "Stow config" --checklist "Select configs to apply:" 20 78 7)
+  options=(
+    1 "Git" off
+    2 "GPG" off
+    3 "micro" off
+    4 "SSH" off
+    5 "tmux" off
+    6 "zsh" off
+    7 "zsh-arch" off
+  )
 
-selections=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
-
-clear
+  selections=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
+  clear
+fi
 
 for selection in $selections; do
     case $selection in
