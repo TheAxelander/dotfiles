@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 pre_gpg() {
   mkdir -p $HOME/.gnupg
