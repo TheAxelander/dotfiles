@@ -2,6 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.dotnet:$HOME/.dotnet/tools:$PATH
 export DOTNET_ROOT=$HOME/.dotnet
 export BAT_THEME=gruvbox-dark
+export GPG_TTY=$(tty)
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -101,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias exa="exa -la"
+alias exa="eza -la"
 alias batp="bat --plain"
 eval "$(zoxide init --cmd cd zsh)"
 
@@ -115,7 +116,7 @@ zstyle ':completion:*' menu no
 # include hidden dirs
 setopt globdots && zstyle ':completion:*' special-dirs true
 # preview directory's content with eza when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -a -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -a -1 --color=always $realpath'
 # show SSH hosts from config file
 zstyle ':completion:*:*:ssh:*' hosts $(awk '/^Host / {for (i=2; i<=NF; i++) print $i}' ~/.ssh/config)
 # switch group using `<` and `>`
