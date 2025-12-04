@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias exa="eza -la"
+alias exa="eza -la --group-directories-first"
 alias batp="bat --plain"
 eval "$(zoxide init --cmd cd zsh)"
 
