@@ -106,7 +106,7 @@ alias exa="eza -la --group-directories-first"
 alias batp="bat --plain"
 eval "$(zoxide init --cmd cd zsh)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
 
 # Additional fzf-tab config
 # set list-colors to enable filename colorizing
