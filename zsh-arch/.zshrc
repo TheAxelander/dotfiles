@@ -106,6 +106,7 @@ alias exa="eza -la --group-directories-first"
 alias batp="bat --plain"
 eval "$(zoxide init --cmd cd zsh)"
 
+export FZF_DEFAULT_OPTS="--style=full"
 eval "$(fzf --zsh)"
 
 # Additional fzf-tab config
@@ -116,7 +117,10 @@ zstyle ':completion:*' menu no
 # include hidden dirs
 setopt globdots && zstyle ':completion:*' special-dirs true
 # preview directory's content with eza when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -a -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*'  fzf-preview 'eza -a -1 --color=always $realpath'
+# custom fzf flags
+# NOTE: fzf-tab does not follow FZF_DEFAULT_OPTS by default
+zstyle ':fzf-tab:*' fzf-flags --style=full
 # show SSH hosts from config file
 zstyle ':completion:*:*:ssh:*' hosts $(awk '/^Host / {for (i=2; i<=NF; i++) print $i}' ~/.ssh/config)
 # switch group using `<` and `>`
