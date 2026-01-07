@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias exa="eza -la --group-directories-first"
 alias batp="bat --plain"
+alias rsynca="rsync -a --info=progress2"
 eval "$(zoxide init --cmd cd zsh)"
 
 export FZF_DEFAULT_OPTS="--style=full --height=80%"
