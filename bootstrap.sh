@@ -2,6 +2,12 @@
 
 pre_btop() {
   mkdir -p $HOME/.config/btop
+
+  TIMESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
+
+  if [ -f "$HOME/.config/btop/btop.conf" ]; then
+      mv "$HOME/.config/btop/btop.conf" "$HOME/.config/btop/btop.conf.$TIMESTAMP.old"
+  fi
 }
 
 pre_gpg() {
