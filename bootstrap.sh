@@ -13,7 +13,7 @@ pre_ssh() {
 }
 
 pre_zsh() {
-  TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
+  TIMESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
 
   if [ -f "$HOME/.zshrc" ]; then
       mv "$HOME/.zshrc" "$HOME/.zshrc.$TIMESTAMP.old"
