@@ -31,7 +31,6 @@ else
     4 "SSH" off
     5 "tmux" off
     6 "zsh" off
-    7 "zsh-arch" off
   )
 
   selections=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -46,7 +45,6 @@ for selection in $selections; do
         4) pre_ssh && stow ssh ;;
         5) stow tmux ;;
         6) pre_zsh && stow zsh ;;
-        7) pre_zsh && stow zsh-arch ;;
         *) echo "Invalid selection: $selection" ;;
     esac
 done
