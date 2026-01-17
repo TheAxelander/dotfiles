@@ -16,6 +16,10 @@ alias exa="eza -la --group-directories-first"
 alias batp="bat --plain"
 alias rsynca="rsync -ah --info=progress2"
 
+function pastebin() {
+  curl -F "file=@$1" https://bin.axelander.net
+}
+
 # zoxide config
 eval "$(zoxide init --cmd cd zsh)"
 
@@ -45,3 +49,12 @@ enable-fzf-tab
 # navi config
 # Installing navi shell widget
 eval "$(navi widget zsh)"
+
+# bun completions
+[ -s "/home/axelander/.bun/_bun" ] && source "/home/axelander/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+alias claude-mem='/home/axelander/.bun/bin/bun "/home/axelander/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
