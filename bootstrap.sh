@@ -4,6 +4,10 @@ pre_gpg() {
   mkdir -p $HOME/.gnupg
 }
 
+pre_kitty() {
+  mkdir -p $HOME/.config/kitty
+}
+
 pre_micro() {
   mkdir -p $HOME/.config/micro
 }
@@ -30,10 +34,11 @@ else
   options=(
     1 "Git" off
     2 "GPG" off
-    3 "micro" off
-    4 "SSH" off
-    5 "tmux" off
-    6 "zsh" off
+    3 "kitty" off
+    4 "micro" off
+    5 "SSH" off
+    6 "tmux" off
+    7 "zsh" off
   )
 
   selections=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -44,10 +49,11 @@ for selection in $selections; do
     case $selection in
         1) stow git ;;
         2) pre_gpg && stow gpg ;;
-        3) pre_micro && stow micro ;;
-        4) pre_ssh && stow ssh ;;
-        5) stow tmux ;;
-        6) pre_zsh && stow zsh ;;
+        3) pre_kitty && stow kitty ;;
+        4) pre_micro && stow micro ;;
+        5) pre_ssh && stow ssh ;;
+        6) stow tmux ;;
+        7) pre_zsh && stow zsh ;;
         *) echo "Invalid selection: $selection" ;;
     esac
 done
