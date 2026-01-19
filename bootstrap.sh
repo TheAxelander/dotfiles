@@ -13,11 +13,14 @@ pre_ssh() {
 }
 
 pre_zsh() {
+  mkdir -p $HOME/.config/myzsh
+
   TIMESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
 
   if [ -f "$HOME/.zshrc" ]; then
       mv "$HOME/.zshrc" "$HOME/.zshrc.$TIMESTAMP.old"
   fi
+  echo 'source "$HOME/.config/myzsh/.zshrc"' > ~/.zshrc
 }
 
 if [ "$#" -gt 0 ]; then
