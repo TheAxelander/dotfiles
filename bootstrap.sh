@@ -1,5 +1,9 @@
 #!/bin/bash
 
+pre_fastfetch() {
+  mkdir -p $HOME/.config/fastfetch
+}
+
 pre_gpg() {
   mkdir -p $HOME/.gnupg
 }
@@ -32,13 +36,14 @@ if [ "$#" -gt 0 ]; then
 else
   cmd=(whiptail --separate-output --title "Stow config" --checklist "Select configs to apply:" 20 78 7)
   options=(
-    1 "Git" off
-    2 "GPG" off
-    3 "kitty" off
-    4 "micro" off
-    5 "SSH" off
-    6 "tmux" off
-    7 "zsh" off
+    1 "fastfetch" off
+    2 "Git" off
+    3 "GPG" off
+    4 "kitty" off
+    5 "micro" off
+    6 "SSH" off
+    7 "tmux" off
+    8 "zsh" off
   )
 
   selections=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -47,13 +52,14 @@ fi
 
 for selection in $selections; do
     case $selection in
-        1) stow git ;;
-        2) pre_gpg && stow gpg ;;
-        3) pre_kitty && stow kitty ;;
-        4) pre_micro && stow micro ;;
-        5) pre_ssh && stow ssh ;;
-        6) stow tmux ;;
-        7) pre_zsh && stow zsh ;;
+        1) pre_fastfetch && stow fastfetch ;;
+        2) stow git ;;
+        3) pre_gpg && stow gpg ;;
+        4) pre_kitty && stow kitty ;;
+        5) pre_micro && stow micro ;;
+        6) pre_ssh && stow ssh ;;
+        7) stow tmux ;;
+        8) pre_zsh && stow zsh ;;
         *) echo "Invalid selection: $selection" ;;
     esac
 done
