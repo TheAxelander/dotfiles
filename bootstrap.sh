@@ -16,6 +16,11 @@ pre_micro() {
   mkdir -p $HOME/.config/micro
 }
 
+pre_noctalia() {
+  mv "$HOME/.config/hypr" "$HOME/.config/hypr.old"
+  mv "$HOME/.config/noctalia" "$HOME/.config/noctalia.old"
+}
+
 pre_ssh() {
   mkdir -p $HOME/.ssh
 }
@@ -41,9 +46,10 @@ else
     3 "GPG" off
     4 "kitty" off
     5 "micro" off
-    6 "SSH" off
-    7 "tmux" off
-    8 "zsh" off
+    6 "noctalia" off
+    7 "SSH" off
+    8 "tmux" off
+    9 "zsh" off
   )
 
   selections=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -57,9 +63,10 @@ for selection in $selections; do
         3) pre_gpg && stow gpg ;;
         4) pre_kitty && stow kitty ;;
         5) pre_micro && stow micro ;;
-        6) pre_ssh && stow ssh ;;
-        7) stow tmux ;;
-        8) pre_zsh && stow zsh ;;
+        6) pre_noctalia && stow noctalia ;;
+        7) pre_ssh && stow ssh ;;
+        8) stow tmux ;;
+        9) pre_zsh && stow zsh ;;
         *) echo "Invalid selection: $selection" ;;
     esac
 done
