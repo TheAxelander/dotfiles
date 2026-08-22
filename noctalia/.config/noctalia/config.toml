@@ -138,9 +138,6 @@ stat = "ram_used"
 type = "sysmon"
 visualization = "graph"
 
-[widget.temp]
-show_label = false
-
 [widget.tray]
 capsule = true
 capsule_fill = "on_secondary"
@@ -152,7 +149,6 @@ color = "secondary"
 active_pill_size = 2.5
 capsule = true
 capsule_fill = "on_primary"
-display = "none"
 inactive_pill_size = 1.0
 pill_scale = 0.80
 show_labels = false
