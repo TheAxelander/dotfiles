@@ -18,6 +18,7 @@ pre_micro() {
 
 pre_noctalia() {
   mv "$HOME/.config/hypr" "$HOME/.config/hypr.old"
+  mv "$HOME/.config/kitty" "$HOME/.config/kitty.old"
   mv "$HOME/.config/noctalia" "$HOME/.config/noctalia.old"
 }
 
