@@ -23,6 +23,9 @@ thickness = 35
     opacity = 1.0
     padding = 6.0
 
+[location]
+address = "Opladen, Germany"
+
 [shell]
 clipboard_image_action_command = "satty -f -"
 launch_apps_as_systemd_services = true
