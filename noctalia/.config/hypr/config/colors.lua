@@ -1,11 +1,11 @@
 -- Cachy colors
 
-CACHYLGREEN = "rgba(82dcccff)"
-CACHYMGREEN = "rgba(00aa84ff)"
-CACHYDGREEN = "rgba(007d6fff)"
-CACHYLBLUE  = "rgba(01ccffff)"
-CACHYMBLUE  = "rgba(182545ff)"
-CACHYDBLUE  = "rgba(111826ff)"
+CACHYLGREEN = "rgba(e78a4eff)"
+CACHYMGREEN = "rgba(e78a4eff)"
+CACHYDGREEN = "rgba(e78a4eff)"
+CACHYLBLUE  = "rgba(a9b665ff)"
+CACHYMBLUE  = "rgba(a9b665ff)"
+CACHYDBLUE  = "rgba(a9b665ff)"
 CACHYWHITE  = "rgba(ffffffff)"
 CACHYGREY   = "rgba(ddddddff)"
-CACHYGRAY   = "rgba(798bb2ff)"
+CACHYGRAY   = "rgba(928374ff)"
