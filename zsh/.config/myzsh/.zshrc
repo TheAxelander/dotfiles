@@ -12,7 +12,7 @@ plugins=(fzf-tab git dirhistory docker docker-compose dotnet zsh-autosuggestions
 
 source $ZSH/oh-my-zsh.sh
 
-alias exa="eza -la --group-directories-first"
+alias exa="eza -la --group-directories-first --icons auto"
 alias batp="bat --plain"
 alias rsynca="rsync -ah --info=progress2"
 
