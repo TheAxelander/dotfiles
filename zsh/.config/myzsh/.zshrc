@@ -8,6 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="af-magic"
 
+source $HOME/.config/myzsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
 plugins=(fzf-tab git dirhistory docker docker-compose dotnet zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -16,15 +18,18 @@ alias exa="eza -la --group-directories-first --icons auto"
 alias batp="bat --plain"
 alias rsynca="rsync -ah --info=progress2"
 
-function pastebin() {
-  curl -F "file=@$1" https://bin.axelander.net
-}
-
 # zoxide config
 eval "$(zoxide init --cmd cd zsh)"
 
 # fzf config
 export FZF_DEFAULT_OPTS="--style=full --height=80%"
+# catppuccin-fzf-mocha color theme
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
 eval "$(fzf --zsh)"
 
 # fzf-tab config
