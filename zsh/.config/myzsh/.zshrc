@@ -17,6 +17,7 @@ source $ZSH/oh-my-zsh.sh
 alias exa="eza -la --group-directories-first --icons auto"
 alias batp="bat --plain"
 alias rsynca="rsync -ah --info=progress2"
+alias zed="zeditor"
 
 # zoxide config
 eval "$(zoxide init --cmd cd zsh)"
