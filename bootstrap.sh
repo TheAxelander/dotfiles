@@ -26,6 +26,10 @@ pre_ssh() {
   mkdir -p $HOME/.ssh
 }
 
+pre_zed() {
+  mkdir -p $HOME/.config/zed
+}
+
 pre_zsh() {
   mkdir -p $HOME/.config/myzsh
 
@@ -50,7 +54,8 @@ else
     6 "noctalia" off
     7 "SSH" off
     8 "tmux" off
-    9 "zsh" off
+    9 "zed" off
+    10 "zsh" off
   )
 
   selections=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -67,7 +72,8 @@ for selection in $selections; do
         6) pre_noctalia && stow noctalia ;;
         7) pre_ssh && stow ssh ;;
         8) stow tmux ;;
-        9) pre_zsh && stow zsh ;;
+        9) pre_zed && stow zed ;;
+        10) pre_zsh && stow zsh ;;
         *) echo "Invalid selection: $selection" ;;
     esac
 done
