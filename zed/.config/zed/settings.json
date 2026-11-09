@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git_panel": {
+    "tree_view": true,
+    "group_by": "staging"
+  },
+  "show_whitespaces": "boundary",
+  "minimap": {
+    "show": "always"
+  },
   "project_panel": {
     "dock": "left"
   },
@@ -30,5 +38,13 @@
     "mode": "dark",
     "light": "Gruvbox Light",
     "dark": "Catppuccin Mocha",
+  },
+  "auto_install_extensions": {
+    "catppuccin" : true,
+    "catppuccin-icons": true,
+    "csharp": true,
+    "html": true,
+    "rainbow-csv": true,
+    "sql": true
   },
 }
